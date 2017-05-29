@@ -2,19 +2,10 @@ InCustomers is a simple CRM tool build on top of JAVA using MVC architecture tha
 
 **DATABASE SCHEMA**
 
-TABLE: CorporateGroup PRIMARY KEY  - id  : integer name   : String emailAddress : String  dateCreated : date 
-TABLE : Role PRIMARY KEY  - id  : integer description : String  role : String  
-TABLE : UserRole PRIMARY KEY  - userId  : integer PRIMARY KEY  - roleId  : integer 
-TABLE : User PRIMARY KEY  - id  : integer ﬁrstName : String lastName : String  corporateGroupId : integer email : String password: String account_locked : boolean enabled : boolean createdDate : date expiryDate : date postCode : String
-
-**TECH TO USE**
-
-1. When a corporate group is deleted, all dependent users must also be deleted. 
-2. When editing a user, you shouldn't be allowed to change corporateGroup - a user binds to one Group only. 
-3. There needs to be a ﬂag on user enabled. Login would be allowed only when this is true. 
-4. There is an expiry date on User entity. Login should be disallowed after this date. 
-5. Use Hibernate as persistence API and use cascading where possible for relation mapping.  
-6. Use spring security conﬁguration to demonstrate url restriction with roles.
+- TABLE: CorporateGroup PRIMARY KEY  - id  : integer name   : String emailAddress : String  dateCreated : date 
+- TABLE : Role PRIMARY KEY  - id  : integer description : String  role : String  
+- TABLE : UserRole PRIMARY KEY  - userId  : integer PRIMARY KEY  - roleId  : integer 
+- TABLE : User PRIMARY KEY  - id  : integer ﬁrstName : String lastName : String  corporateGroupId : integer email : String password: String account_locked : boolean enabled : boolean createdDate : date expiryDate : date postCode : String
 
 **TECH AND TOOLS**
 
